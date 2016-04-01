@@ -16,19 +16,19 @@ But now he’s back!
 
 I am proud to share with you my newest slap-dash project,  ‘Invoke-Clippy!‘
 
-###Usage
+###Installation
 
 Install the module by downloading from here, or using the PowerShell Gallery
 
-######Manual
+######Manual steps
 
 * Copy the "PowerClippy" folder into your module path. Note: You can find an
 appropriate directory by running `$ENV:PSModulePath.Split(';')`.
  * Run `Import-Module PowerCippy` from your PowerShell command prompt.
 
-######Using the PowerShell Gallery
+######Using the PowerShell Gallery (WMF 5 and up!)
 
->PowerShell Gallery example
+>Find-Module -Name PowerClippy | Install-Module
 
 
 ###Syntax
