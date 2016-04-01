@@ -2,8 +2,6 @@
 param(
     $text="Hi! I am Clippy, your office assitant.  Would you like some assistance today?",
     $Button1Text,$Button2Text
-
-
 )
 # Add assemblies
 Add-Type -AssemblyName PresentationFramework, System.Drawing, System.Windows.Forms
@@ -69,11 +67,19 @@ $ClippyText.Text = $text
 if ($Button1Text){
 $button1.Content = $Button1Text
 $button1.Visibility = 'Hidden'
+
+$button1.add_Click({
+    #code to execute when the second button is clicked
+    })
 }
 
 if ($Button2Text){
 $button2.Content = $Button2Text
 $button2.Visibility = 'Hidden'
+
+$button2.add_Click({
+    #code to execute when the second button is clicked
+    })
 }
 # Create notifyicon, and right-click -> Exit menu
 $notifyicon = New-Object System.Windows.Forms.NotifyIcon
