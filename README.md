@@ -9,10 +9,6 @@ Microsoft Clippy!
 
 ![Clippy](https://foxdeploy.files.wordpress.com/2016/03/clippy.png?w=584&h=542)
 
-Clippy was wildly beloved by end-users and IT Professionals alike, just checkout it’s many accomplishments!
-
->Smithsonian Magazine called Clippy “one of the worst software design blunders in the annals of computing”.[16] Time magazine included Clippy in a 2010 article listing fifty worst inventions.[17]
-The creator of Clippy went on to great things, and was definitely never haunted by the memory of Clippy, as you can see in his keynote discussion at ROFLCon.
 
 For too many years, Clippy has gone missing in Windows, and admins were left with horrible solutions, like sending e-mails or talking to their users face-to-face.
 
@@ -20,11 +16,32 @@ But now he’s back!
 
 I am proud to share with you my newest slap-dash project,  ‘Invoke-Clippy!‘
 
-Syntax is simple:
+###Usage
+
+Install the module by downloading from here, or using the PowerShell Gallery
+
+######Manual
+
+* Copy the "PowerClippy" folder into your module path. Note: You can find an
+appropriate directory by running `$ENV:PSModulePath.Split(';')`.
+ * Run `Import-Module PowerCippy` from your PowerShell command prompt.
+
+######Using the PowerShell Gallery
+
+>PowerShell Gallery example
+
+
+###Syntax
+
+Syntax is simple!
 
 ![](https://foxdeploy.files.wordpress.com/2016/03/clippy01.png?w=1272&h=114)
 
 ![](https://foxdeploy.files.wordpress.com/2016/03/clippy02.png?w=1272&h=114)
+
+>Invoke-Clippy -text 'Would you like to install Windows 10?' -Button1Text Yes -Button2Text 'Restart PC'
+   
+>   >Provides a helpful Clippy UI to notify users of the wonders of Windows 10, in case they were unaware.   If the user isn't interested, shuts down their PC.
 
 ##Clippy, how I've missed you!
 
