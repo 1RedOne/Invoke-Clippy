@@ -20,7 +20,8 @@
 Function Invoke-Clippy{
 param(
     $text="Hi! I am Clippy, your office assitant.  Would you like some assistance today?",
-    $Button1Text,$Button2Text
+    $Button1Text,$Button2Text,
+    [bool] $HidePowerShell = $true
 )
 # Add assemblies
 Add-Type -AssemblyName PresentationFramework, System.Drawing, System.Windows.Forms
@@ -144,11 +145,12 @@ $menuitem.add_Click({
  })
 
  
-
-# Make PowerShell Disappear
-$windowcode = '[DllImport("user32.dll")] public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);'
-$asyncwindow = Add-Type -MemberDefinition $windowcode -name Win32ShowWindowAsync -namespace Win32Functions -PassThru
-$null = $asyncwindow::ShowWindowAsync((Get-Process -PID $pid).MainWindowHandle, 0)
+if ($HidePowerShell) {
+    # Make PowerShell Disappear
+    $windowcode = '[DllImport("user32.dll")] public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);'
+    $asyncwindow = Add-Type -MemberDefinition $windowcode -name Win32ShowWindowAsync -namespace Win32Functions -PassThru
+    $null = $asyncwindow::ShowWindowAsync((Get-Process -PID $pid).MainWindowHandle, 0)
+}
 
 # Force garbage collection just to start slightly lower RAM usage.
 [System.GC]::Collect()
