@@ -29,7 +29,8 @@ Add-Type -AssemblyName PresentationFramework, System.Drawing, System.Windows.For
 $icon = [System.Drawing.Icon]::ExtractAssociatedIcon("$pshome\powershell.exe")
 
 # Create XAML form in Visual Studio, ensuring the ListView looks chromeless
-[xml]$xaml =  '<Window
+    [xml]$xaml =  @"
+<Window
 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="657" Width="525" Background="Transparent" AllowsTransparency="True" WindowStyle="None" Topmost="True">
@@ -57,7 +58,7 @@ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     <Setter Property="Control.VerticalContentAlignment" Value="Stretch"/>
                 </Style>
             </ListView.ItemContainerStyle>
-            <Image x:Name="image" Height="140" Width="156" Source="C:\git\Invoke-Clippy\Clippy.png"/>
+            <Image x:Name="image" Height="140" Width="156" Source="$script:ModuleRoot\Clippy.png"/>
         </ListView>
         <Grid x:Name="gr3id" Margin="150,-190,29,190">
             <Grid.RowDefinitions>
@@ -73,7 +74,7 @@ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         <Button Name="button2" Style="{StaticResource ClippyButton}" Content="Button" HorizontalAlignment="Left" Height="38" Margin="160,-78,0,0" VerticalAlignment="Top" Width="72"/>
     </Grid>
 </Window>
-'
+"@
 
 # Turn XAML into PowerShell objects
 $window = [Windows.Markup.XamlReader]::Load((New-Object System.Xml.XmlNodeReader $xaml))
