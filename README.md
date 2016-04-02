@@ -37,6 +37,8 @@ Syntax is simple!
 
 ![](https://foxdeploy.files.wordpress.com/2016/03/clippy01.png?w=1272&h=114)
 
+This adds a new PowerShell icon to the system tray.  When clicked, you'll see a familiar friend.  If you'd like Clippy to appear straight away (add this feature tomorrow)
+
 ![](https://foxdeploy.files.wordpress.com/2016/03/clippy02.png?w=1272&h=114)
 
 >Invoke-Clippy -text 'Would you like to install Windows 10?' -Button1Text Yes -Button2Text 'Restart PC'
