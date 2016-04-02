@@ -9,6 +9,7 @@
    Invoke-Clippy -text 'Would you like to install Windows 10?' -Button1Text Yes -Button2Text 'Restart PC'
    
    Provides a helpful Clippy UI to notify users of the wonders of Windows 10, in case they were unaware.   If the user isn't interested, shuts down their PC.
+
 .LINK
    http://www.foxdeploy.com/powerclippy
    https://github.com/1RedOne/Invoke-Clippy/
@@ -23,8 +24,8 @@
   If specified, creates a button for the user to click.  Add code to line 81 to make the button function.  Include the text you'd like as the value for this param
 #>
 
-function Invoke-Clippy{
-    param(
+function Invoke-Clippy {
+    param (
         [string] $Text = 'Hi! I am Clippy, your office assitant.  Would you like some assistance today?',
         [string] $Button1Text,
         [string] $Button2Text,
@@ -43,7 +44,7 @@ function Invoke-Clippy{
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 Title="MainWindow" Height="657" Width="525" Background="Transparent" AllowsTransparency="True" WindowStyle="None" Topmost="True">
             <Window.Resources>
-                <Style x:Key="ClippyButton"  TargetType="Button"  >
+                <Style x:Key="ClippyButton" TargetType="Button" >
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
@@ -92,21 +93,21 @@ function Invoke-Clippy{
 
     $ClippyText.Text = $Text
 
-    if ($Button1Text){
+    if ($Button1Text) {
         $Button1.Content = $Button1Text
         $Button1.Visibility = 'Hidden'
 
         $Button1.add_Click({
-            #code to execute when the second button is clicked
+            # code to execute when the second button is clicked
         })
     }
 
-    if ($Button2Text){
+    if ($Button2Text) {
         $Button2.Content = $Button2Text
         $Button2.Visibility = 'Hidden'
 
         $Button2.add_Click({
-            #code to execute when the second button is clicked
+            # code to execute when the second button is clicked
         })
     }
     # Create notifyicon, and right-click -> Exit menu
@@ -141,7 +142,7 @@ function Invoke-Clippy{
 
     # Close the window if it loses focus
     $Window.Add_Deactivated({
-	    start-sleep -Milliseconds 500
+	    Start-Sleep -Milliseconds 500
         $Window.Hide()
     })
 
@@ -156,7 +157,7 @@ function Invoke-Clippy{
     if ($HidePowerShell) {
         # Make PowerShell Disappear
         $WindowCode = '[DllImport("user32.dll")] public static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);'
-        $AsyncWindow = Add-Type -MemberDefinition $WindowCode -name Win32ShowWindowAsync -namespace Win32Functions -PassThru
+        $AsyncWindow = Add-Type -MemberDefinition $WindowCode -Name Win32ShowWindowAsync -namespace Win32Functions -PassThru
         $null = $AsyncWindow::ShowWindowAsync((Get-Process -PID $PID).MainWindowHandle, 0)
     }
 
