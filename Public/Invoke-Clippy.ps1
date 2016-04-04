@@ -1,14 +1,14 @@
 ﻿<#
 .Synopsis
-   Notify your users or coworkers with a familiar friend
+    Notify your users or coworkers with a familiar friend
 
 .DESCRIPTION
-   Provides a helpful way to interact with users using Clippy, the beloved Office Assistant from Office '97
+    Provides a helpful way to interact with users using Clippy, the beloved Office Assistant from Office '97
 
 .EXAMPLE
-   Invoke-Clippy -text 'Would you like to install Windows 10?' -Button1Text Yes -Button2Text 'Restart PC'
+    Invoke-Clippy -text 'Would you like to install Windows 10?' -Button1Text Yes -Button2Text 'Restart PC'
    
-   Provides a helpful Clippy UI to notify users of the wonders of Windows 10, in case they were unaware.   If the user isn't interested, shuts down their PC.
+    Provides a helpful Clippy UI to notify users of the wonders of Windows 10, in case they were unaware.   If the user isn't interested, shuts down their PC.
 
 .EXAMPLE
     Invoke-Clippy -text 'Would you like to install Windows 10?' -Button1Text Yes -Button2Text 'Restart PC' -DontHidePowerShell
@@ -16,17 +16,17 @@
     Same results as previous example, but the parent PowerShell instance is not hidden from the user.
 
 .LINK
-   http://www.foxdeploy.com/powerclippy
-   https://github.com/1RedOne/Invoke-Clippy/
+    http://www.foxdeploy.com/powerclippy
+    https://github.com/1RedOne/Invoke-Clippy/
 
 .PARAMETER TEXT
-  Contains the text you'd like Clippy to display.  Defaults to "Hi! I am Clippy, your office assitant.  Would you like some assistance today?"
+    Contains the text you'd like Clippy to display.  Defaults to "Hi! I am Clippy, your office assitant.  Would you like some assistance today?"
 
 .PARAMETER Button1Text
-  If specified, creates a button for the user to click.  Add code to line 70 to make the button function.  Include the text you'd like as the value for this param
+    If specified, creates a button for the user to click.  Add code to line 70 to make the button function.  Include the text you'd like as the value for this param
 
 .PARAMETER Button2Text
-  If specified, creates a button for the user to click.  Add code to line 81 to make the button function.  Include the text you'd like as the value for this param
+    If specified, creates a button for the user to click.  Add code to line 81 to make the button function.  Include the text you'd like as the value for this param
 
 .PARAMETER DontHidePowerShell
     If used, the PowerShell instance will not be hidden from the user. This can be useful if you are calling the function from PowerShell ISE. 
