@@ -24,7 +24,7 @@ Install the module by downloading from here, or using the PowerShell Gallery
 
 * Copy the "PowerClippy" folder into your module path. Note: You can find an
 appropriate directory by running `$ENV:PSModulePath.Split(';')`.
- * Run `Import-Module PowerCippy` from your PowerShell command prompt.
+ * Run `Import-Module PowerClippy` from your PowerShell command prompt.
 
 ######Using the PowerShell Gallery (WMF 5 and up!)
 
@@ -42,7 +42,7 @@ This adds a new PowerShell icon to the system tray.  When clicked, you'll see a 
 ![](https://foxdeploy.files.wordpress.com/2016/03/clippy02.png?w=1272&h=114)
 
 >Invoke-Clippy -text 'Would you like to install Windows 10?' -Button1Text Yes -Button2Text 'Restart PC'
-   
+
 >   >Provides a helpful Clippy UI to notify users of the wonders of Windows 10, in case they were unaware.   If the user isn't interested, shuts down their PC.
 
 ##Clippy, how I've missed you!
