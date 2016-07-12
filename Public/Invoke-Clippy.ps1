@@ -20,7 +20,7 @@
     https://github.com/1RedOne/Invoke-Clippy/
 
 .PARAMETER TEXT
-    Contains the text you'd like Clippy to display.  Defaults to "Hi! I am Clippy, your office assitant.  Would you like some assistance today?"
+    Contains the text you'd like Clippy to display.  Defaults to "Hi! I am Clippy, your office assistant.  Would you like some assistance today?"
 
 .PARAMETER Button1Text
     If specified, creates a button for the user to click.  Add code to line 70 to make the button function.  Include the text you'd like as the value for this param
@@ -34,7 +34,7 @@
 
 function Invoke-Clippy {
     param (
-        [string] $Text = 'Hi! I am Clippy, your office assitant.  Would you like some assistance today?',
+        [string] $Text = 'Hi! I am Clippy, your office assistant.  Would you like some assistance today?',
         [string] $Button1Text,
         [string] $Button2Text,
         [Parameter (Mandatory = $false)]
