@@ -1,6 +1,6 @@
 # Invoke-Clippy
 
-######Excerpted from [PowerClippy on FoxDeploy.com](https://foxdeploy.wordpress.com/?p=2646&preview=true)
+## Excerpted from [PowerClippy on FoxDeploy.com](https://foxdeploy.wordpress.com/?p=2646&preview=true)
 
 Back with the release of Office ’97 in November of 1996, Microsoft introduced a beloved new helper tool to assist users in navigating through the daunting changes in Microsoft Office,
 
@@ -16,22 +16,22 @@ But now he’s back!
 
 I am proud to share with you my newest slap-dash project,  ‘Invoke-Clippy!‘
 
-###Installation
+### Installation
 
 Install the module by downloading from here, or using the PowerShell Gallery
 
-######Manual steps
+###### Manual steps
 
 * Copy the "PowerClippy" folder into your module path. Note: You can find an
 appropriate directory by running `$ENV:PSModulePath.Split(';')`.
  * Run `Import-Module PowerClippy` from your PowerShell command prompt.
 
-######Using the PowerShell Gallery (WMF 5 and up!)
+###### Using the PowerShell Gallery (WMF 5 and up!)
 
 >Find-Module -Name PowerClippy | Install-Module
 
 
-###Syntax
+### Syntax
 
 Syntax is simple!
 
@@ -53,7 +53,7 @@ You have the option of specifying -Button1 or -Button2 to add additional buttons
 
 Consider this a framework to use to ~~annoy~~ notify your coworkers with helpful reminders.
 
-##Suggestions
+## Suggestions
 
 Scheduled Task on your coworkers machine every 15 minutes to remind them to check the ticket queue
 Add two buttons, and make the second button spawn another instance of Clippy (consider reversing the X,Y values to make Clippy appear on the other side)
@@ -62,7 +62,7 @@ No matter what you come up with, share it with the class!  Did you find a way to
 
 Either comment here or make your own fork and send me a Pull Request.  I’d love to see what you come up with.
 
-##References
+## References
 
 Pretty much everything here I learned on the spot thanks to Stack Overflow.  Also big big thanks to Chrissy Lemaire in her excellent Scripting Guys article, ‘How to Create Popups’ in PowerShell.  Most of the code for window sizing comes from her work!
 
